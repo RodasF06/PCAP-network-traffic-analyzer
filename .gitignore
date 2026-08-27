@@ -1,0 +1,22 @@
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+
+# Caché y archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configuración de entornos y variables secretas
+.env
+*.env
+
+# Carpetas del editor / IDE
+.vscode/
+.idea/
+
+# Capturas de prueba y reportes generados (Opcional)
+# Si no quieres subir archivos .pcap pesados ni reportes generados en las pruebas:
+samples/*.pcap
+reports/*.json
