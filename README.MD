@@ -54,8 +54,9 @@ python pcap_analyzer.py
 ```
 El análisis procesará la captura y guardará el informe estructurado automáticamente en reports/pcap_report.json.
 
-📁 Estructura del Proyecto
-Plaintext
+## 📁 Estructura del Proyecto
+
+```text
 pcap-network-analyzer/
 ├── samples/                # Capturas de red de entrada (.pcap)
 │   └── sample_traffic.pcap
@@ -68,7 +69,6 @@ pcap-network-analyzer/
 
 📄 Ejemplo de Salida (JSON)
 
-JSON
 {
     "summary": {
         "total_packets_analyzed": 42,
@@ -86,30 +86,3 @@ JSON
 }
 
 ---
-
-### 2. Archivo de Exclusiones (`.gitignore`)
-
-Crea o edita el archivo llamado **`.gitignore`** (sin nombre, solo extensión `.gitignore`) en la raíz del proyecto y agrega estas líneas para **evitar subir el entorno virtual ni archivos pesados/temporales**:
-
-```text
-# Entorno virtual de Python
-.venv/
-venv/
-ENV/
-
-# Archivos compilados y caché de Python
-__pycache__/
-*.py[cod]
-
-# IDEs y editores
-.vscode/
-.idea/
-
-# Reportes y capturas (opcional si deseas mantener el repositorio limpio)
-# reports/
-
-3. Archivo de Dependencias (requirements.txt)
-Con el entorno virtual .venv activado en tu terminal de PowerShell, genera el archivo con todas las dependencias exactas ejecutando:
-
-PowerShell
-pip freeze > requirements.txt
