@@ -19,14 +19,14 @@ La herramienta procesa paquetes de red filtrados por protocolos clave (IP, DNS, 
 1. **Python 3.10+**
 2. **Wireshark / TShark:** Es **imprescindible** tener instalado Wireshark en el sistema operativo, ya que `pyshark` utiliza el ejecutable `tshark` de Wireshark para el parsing de paquetes.
    - En Windows, asegurarse de que TShark esté incluido en la instalación por defecto.
-
+   - En Linux, sudo apt install tshark
 ---
 
 ## 📦 Instalación y Configuración
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/RodasF06/pcap-network-analyzer.git](https://github.com/RodasF06/pcap-network-analyzer.git)
+   git clone [https://github.com/RodasF06/pcap-network-analyzer.git]
    cd pcap-network-analyzer
 
 Crear y activar el entorno virtual:
@@ -45,7 +45,8 @@ Instalar dependencias:
 ```bash
 pip install -r requirements.txt
 ```
-🎯 Modo de Uso
+## 🎯 Modo de Uso
+
 Coloca el archivo .pcap o .pcapng que deseas analizar dentro de la carpeta samples/ (por ejemplo, samples/sample_traffic.pcap).
 
 Ejecuta el script principal: 
