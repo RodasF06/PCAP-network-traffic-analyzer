@@ -4,6 +4,7 @@ from collections import Counter
 import os
 import asyncio
 import sys
+from pathlib import Path
 
 def analyze_pcap(pcap_file):
     try:
@@ -75,4 +76,13 @@ def analyze_pcap(pcap_file):
     print(f"[+] Análisis completado con éxito. Reporte guardado en: {output_filename}")
 
 if __name__ == "__main__":
-    analyze_pcap("samples/sample_traffic.pcap")
+    # Buscar todos los archivos .pcap o .pcapng dentro de samples/
+    samples_dir = Path("samples")
+    pcap_files = list(samples_dir.glob("*.pcap")) + list(samples_dir.glob("*.pcapng"))
+
+    if pcap_files:
+        # Toma el primer archivo .pcap que encuentre en la carpeta
+        target_file = str(pcap_files[0])
+        analyze_pcap(target_file)
+    else:
+        print("[!] Error: No se encontraron archivos .pcap en la carpeta 'samples/'.")
